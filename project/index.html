@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デジタルスタンプラリー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>デジタルスタンプラリー</h1>
+        <button onclick="openMap()">Map</button>
+        <button onclick="checkLocation()">位置を確認</button>
+        <div id="points">所持ポイント：<span id="point-display">0</span></div>
+        <div id="container">
+            <div id="stamp-container">
+                <!-- スタンプがここに動的に追加されます -->
+            </div>
+        </div>
+        <button onclick="goToExchange()">交換所に行く</button>
+        <button onclick="usePoints()">ポイントを使う</button>
+        <button id="completion-button" style="display: none;" onclick="showCompletionCode()">完了コードを表示</button>
+        <div id="staff-reset" style="display: none;">
+            <input type="password" id="staff-password" placeholder="スタッフパスワード">
+            <button onclick="resetStamps()">スタンプをリセット</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
