@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    background-color: #f5f5f5;
+    background-image: url(../image/cruise.jpg)
+}
+
+h1 {
+    color: #fff;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        margin: 0px;
+    }
+    .container {
+        padding: 10px;
+    }
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background-color: #fafafa;
+}
+
+iframe {
+    width: 100%;
+    height: 800px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+#courseDetails div {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background-color: #fafafa;
+}
+
+#courseDetails img {
+    max-width: 100%;
+    height: auto;
+}
+
+#pdfDownload {
+    display: block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#pdfDownload:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .md-flex {
+    display: flex;
+  }
+
+  .md-flex li + li {
+    margin-left: 16px;
+  }
+}
+
+/* ナビゲーションバーのスタイル */
+.navbar {
+    background-color: rgba(101, 93, 144, 0.6);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* ヘッダーを伸ばしてナビゲーションアイテムとトグルを右側に移動 */
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px; /* 見出しの文字サイズを調整 */
+    
+}
+
+h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 28px; /* 見出しの文字サイズを調整 */
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end; /* トグルを右側に配置 */
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; /* メニューアイテムを中央に配置 */
+    justify-content: flex-end; /* メニューアイテムを右側に配置 */
+}
+
+.navbar-menu li {
+    margin-left: 20px; /* メニューアイテム間のマージンを調整 */
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: rgba(54, 156, 209, 0.7);
+    color: #fff;
+    text-align: center;
+    position: static;
+    bottom: 0; /* 画面下部に配置 */
+    left: 0;
+    right: 0;
+}
+
+/* メディアクエリ：スマートフォン向けのスタイル */
+@media (max-width: 850px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 60px; /* ナビゲーションバーの下に配置 */
+        left: 0;
+        right: 0;
+        background-color: rgba(101, 93, 144, 0.6);
+        flex-direction: column;
+        z-index: 1; /* メニューを他の要素の上に表示 */
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin-left: 0;
+        margin-bottom: 10px; /* メニューアイテム間のマージンを調整 */
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+  h1 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-image: url('../image/cruise.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* ナビゲーションバーのスタイル */
+.navbar {
+    background-color: rgba(101, 93, 144, 0.6);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* ヘッダーを伸ばしてナビゲーションアイテムとトグルを右側に移動 */
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px; /* 見出しの文字サイズを調整 */
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end; /* トグルを右側に配置 */
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; /* メニューアイテムを中央に配置 */
+    justify-content: flex-end; /* メニューアイテムを右側に配置 */
+}
+
+.navbar-menu li {
+    margin-left: 20px; /* メニューアイテム間のマージンを調整 */
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.courses {
+    display: flex;
+    justify-content:space-around; /* コース間のスペースを均等に配置 */
+    flex-wrap: wrap; /* コースが横に並び切れない場合、折り返す */
+}
+.course {
+    flex-basis: calc(30% - 5px); /* コースの幅を計算して設定（5つのコースを横に並べるため） */
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.course-container {
+    text-align: center; /* タイトルを中央揃えにする */
+    padding: 20px;
+}
+.course img {
+    max-width: 100%; /* 画像の幅を親要素に合わせる */
+    height: auto; /* アスペクト比を保つために高さを自動調整 */
+    margin-bottom: 10px;
+}
+.course h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+footer {
+    background-color: rgba(54, 156, 209, 0.7);
+    color: #fff;
+    text-align: center;
+    position: fixed; /* 画面下部に固定 */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* 必要に応じて調整 */
+}
+
+/* メディアクエリ：スマートフォン向けのスタイル */
+@media (max-width: 850px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 60px; /* ナビゲーションバーの下に配置 */
+        left: 0;
+        right: 0;
+        background-color: rgba(101, 93, 144, 0.6);
+        flex-direction: column;
+        z-index: 1; /* メニューを他の要素の上に表示 */
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin-left: 0;
+        margin-bottom: 10px; /* メニューアイテム間のマージンを調整 */
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 590px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .courses {
+        flex-direction: column; /* コースを縦に配置 */
+        align-items: center; /* コースを中央に配置 */
+    }
+
+    .course {
+        flex-basis: 100%; /* コースの幅を100%に設定 */
+    }
+  
+   footer {
+    position: relative;
+    }
+}

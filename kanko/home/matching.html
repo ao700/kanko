@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モデルコースマッチング</title>
+    <link rel="stylesheet" href="matching.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-header">
+            <h1>長崎観光モデルコースマッチング</h1>
+            <button class="menu-toggle" aria-label="メニューを開く">&#9776;</button>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="../all/home.html">ホーム</a></li>
+            <!--<li><a href="#">モデルコース</a></li>-->
+            <li><a href="#usage">使い方</a></li>
+            <li><a href="../form/survey.html">アンケート</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <!--<div class="form-group">
+            <h2>現在地から一番近い場所を選んでください</h2>
+            <select id="startpoint" class="select-field">
+                <option value="matugae">松ヶ枝国際ターミナル</option>
+                <option value="nagasaki">長崎駅</option>
+                <option value="urakami">浦上駅</option>
+            </select>
+        </div> -->
+      
+        <div class="form-group">
+            <h2>出発時間を選択してください</h2>
+            <select id="arrival-time" class="select-field">
+                <!--<option value="7">7:00</option>
+				<option value="7">7:30</option>
+                <option value="8">8:00</option>
+				<option value="8">8:30</option>-->
+                <option value="9">9:00</option>
+				<option value="9">9:30</option>
+                <option value="10">10:00</option>
+				<option value="10">10:30</option>
+                <option value="11">11:00</option>
+				<option value="11">11:30</option>
+                <option value="12">12:00</option>
+				<option value="12">12:30</option>
+				<option value="13">13:00</option>
+				<option value="13">13:30</option>
+				<option value="14">14:00</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h2>観光時間を選択してください</h2>
+            <select id="duration" class="select-field">
+                <option value="1">1時間</option>
+                <option value="2">2時間</option>
+                <option value="3">3時間</option>
+                <option value="4">4時間</option>
+                <option value="5">5時間</option>
+                <option value="6">6時間</option>
+                <option value="7">7時間</option>
+                <option value="8">8時間</option>
+                <option value="9">9時間</option>
+				<option value="10">10時間</option>
+				<option value="11">11時間</option>
+				<!--<option value="12">12時間</option>
+				<option value="13">13時間</option>
+                <option value="14">14時間</option>
+                <option value="15">15時間</option>-->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h2>やりたいことを選択してください</h2>
+            <select id="genre" class="select-field">
+                <option value="activity">アクティビティ、体験をしたい</option>
+                <option value="art">芸術を楽しみたい</option>
+                <option value="historical">歴史的観光地をまわりたい</option>
+                <option value="nature">自然を堪能したい</option>
+                <option value="peace">平和に関する場所をまわりたい</option>
+                <option value="short">近場のスポットをまわりたい</option>
+                <!--<option value="food"></option>-->
+                <option value="none">定番コース</option>
+                <option value="loca">君が心をくれたから聖地巡礼</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button id="search-button">この条件で探す</button>
+        </div>
+        <!--エラーメッセージの表示 -->
+        <div id="error-message" style="color: red; font-weight: bold;"></div>
+    </div>
+<!-- 使い方セクション -->
+<section class="usage-section" id = "usage">
+    <h3>使い方</h3>
+    <!-- ステップ1 -->
+    <div class="usage-step">
+        <h3>ステップ1: 出発時間を選択</h3>
+        <img src="../image/step1.png" alt="出発時間を選択する画像">
+    </div>
+
+    <!-- ステップ2 -->
+    <div class="usage-step">
+        <h3>ステップ2: 観光時間を選択</h3>
+        <img src="../image/step2.png" alt="観光時間を選択する画像">
+    </div>
+
+    <!-- ステップ3 -->
+    <div class="usage-step">
+        <h3>ステップ3: やりたいことを選択</h3>
+        <img src="../image/step3.png" alt="やりたいことを選択する画像">
+    </div>
+
+    <!-- ステップ4 -->
+    <div class="usage-step">
+        <h3>ステップ4: 探すをタップ</h3>
+        <img src="../image/step4.png" alt="検索ボタンをクリックする画像">
+    </div>
+
+    <!-- ステップ5 -->
+    <div class="usage-step">
+        <h3>ステップ5: コース表示</h3>
+        <img src="../image/step5.png" alt="検索結果を表示する画像">
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2023 長崎観光モデルコースマッチング</p>
+    </footer>
+
+    <script src="matching.js"></script>
+</body>
+</html>
