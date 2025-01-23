@@ -20,8 +20,10 @@ function changeBackgroundImage() {
 // 最初の実行
 changeBackgroundImage();
 
-// 5秒ごとに背景画像を切り替える
-setInterval(changeBackgroundImage, 5000);
+// 最初の3秒待ってから切り替えを開始
+setTimeout(() => {
+    setInterval(changeBackgroundImage, 5000);
+}, 3000);
 
 //ナビゲーションの設定
 document.addEventListener("DOMContentLoaded", function() {
