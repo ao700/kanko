@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>長崎市観光</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../corse.css" rel="stylesheet">
+</head>
+<body>
+<div id="background-image"></div>
+<div class="container">
+  <h1 class="mt-4">長崎市観光</h1>
+  <p>時間: <span id="totalTime">10時~13時</span></p>
+  <p>移動開始位置名: <span id="startLocation">松ヶ枝国際ターミナル</span></p>
+  
+  <!-- 観光地のセクション --> 
+    <!-- Leafletのスタイルシートとスクリプトの追加 -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<!-- マップを表示するためのコンテナ -->
+<div id="mapid" style="height: 400px;"></div>
+
+<script>
+// マップの初期化
+var mymap = L.map('mapid').setView([32.7503,129.8788], 12);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(mymap);
+
+// 観光地のピンを追加
+var locations = [
+    {lat:32.772522, lng:129.864552, name: "長崎原爆資料館"},
+    {lat:32.772124, lng:129.865019, name: "国立長崎原爆死没者追悼平和祈念館"}
+];
+
+locations.forEach(function(location) {
+    L.marker([location.lat, location.lng]).addTo(mymap)
+        .bindPopup(location.name);
+});
+</script>
+
+
+            <div class="section">
+                <h2>1つ目の場所: 長崎原爆資料館</h2>
+                <img src="../../../image/genbakusiryoukan.jpg" alt="長崎原爆資料館の写真" class="img-fluid rounded">
+                <p>特徴: 「長崎を最後の被爆地に」原爆の脅威と平和の尊さを伝え、恒久平和を世界に発信<br>1945年に原爆により被害を受けた長崎の歴史と平和への願いを伝える施設です。被爆の惨状や核兵器開発の歴史、長崎の復興の様子などをストーリー性のある展示で紹介しています。核兵器のない世界の実現に向けて平和を発信する場として、国内外から多くの人々が訪れる場所です。</p>
+                <p>滞在時間: 60分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=長崎原爆資料館&center=32.772522,129.864552&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>2つ目の場所: 国立長崎原爆死没者追悼平和祈念館</h2>
+                <img src="../../../image/tuitoukinenkan.jpg" alt="国立長崎原爆死没者追悼平和祈念館の写真" class="img-fluid rounded">
+                <p>特徴: 原爆死没者の追悼と平和祈念<br>1945年8月9日に長崎市に投下された原子爆弾の犠牲者を追悼し、世界平和を祈る場所です。中には、死没者の名前が掲載された名簿が納められている追悼スペースや、原爆に関する手記や関連図書を読むことができるエリア、そして交流ラウンジもあります。また、音声と映像で被爆者の証言が聞けるほか、被爆者の医療や研究に関する情報も提供されています。</p>
+                <p>滞在時間: 60分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=国立長崎原爆死没者追悼平和祈念館&center=32.772124,129.865019&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+    <div class="col-12 col-md-6">
+        <p>到着:松ヶ枝国際ターミナル</p>
+    </div>
+
+<!-- BootstrapのJavaScriptとjQueryを読み込み --> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script> 
+<script src ="../../corse.js"></script>
+</body>
+</html>

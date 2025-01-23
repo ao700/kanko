@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>長崎市観光</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../corse.css" rel="stylesheet">
+</head>
+<body>
+<div id="background-image"></div>
+<div class="container">
+  <h1 class="mt-4">長崎市観光</h1>
+  <p>時間: <span id="totalTime">7時~16時</span></p>
+  <p>移動開始位置名: <span id="startLocation">松ヶ枝国際ターミナル</span></p>
+  
+  <!-- 観光地のセクション --> 
+    <!-- Leafletのスタイルシートとスクリプトの追加 -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<!-- マップを表示するためのコンテナ -->
+<div id="mapid" style="height: 400px;"></div>
+
+<script>
+// マップの初期化
+var mymap = L.map('mapid').setView([32.7503,129.8788], 12);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(mymap);
+
+// 観光地のピンを追加
+var locations = [
+    {lat:32.772522, lng:129.864552, name: "長崎原爆資料館"},
+    {lat:32.772124, lng:129.865019, name: "国立長崎原爆死没者追悼平和祈念館"},
+    {lat:32.7732954601044, lng:129.863112441764, name: "平和公園（原爆落下中心地）"},
+    {lat:32.773738, lng:129.857787, name: "城山小学校（城山小学校平和祈念館）"},
+    {lat:32.7746167327271, lng:129.86257680249, name: "平和公園（平和祈念像・平和の泉)"},
+    {lat:32.77901, lng:129.865573, name: "如己堂"},
+    {lat:32.767459, lng:129.867343, name: "一本柱鳥居（山王神社）"},
+    {lat:32.7531553, lng:129.8748897, name: "福済寺"},
+    {lat:32.748753, lng:129.886768, name: "長崎市亀山社中記念館"}
+];
+
+locations.forEach(function(location) {
+    L.marker([location.lat, location.lng]).addTo(mymap)
+        .bindPopup(location.name);
+});
+</script>
+
+
+            <div class="section">
+                <h2>1つ目の場所: 長崎原爆資料館</h2>
+                <img src="../../../image/genbakusiryoukan.jpg" alt="長崎原爆資料館の写真" class="img-fluid rounded">
+                <p>特徴: 「長崎を最後の被爆地に」原爆の脅威と平和の尊さを伝え、恒久平和を世界に発信<br>1945年に原爆により被害を受けた長崎の歴史と平和への願いを伝える施設です。被爆の惨状や核兵器開発の歴史、長崎の復興の様子などをストーリー性のある展示で紹介しています。核兵器のない世界の実現に向けて平和を発信する場として、国内外から多くの人々が訪れる場所です。</p>
+                <p>滞在時間: 60分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=長崎原爆資料館&center=32.772522,129.864552&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>2つ目の場所: 国立長崎原爆死没者追悼平和祈念館</h2>
+                <img src="../../../image/tuitoukinenkan.jpg" alt="国立長崎原爆死没者追悼平和祈念館の写真" class="img-fluid rounded">
+                <p>特徴: 原爆死没者の追悼と平和祈念<br>1945年8月9日に長崎市に投下された原子爆弾の犠牲者を追悼し、世界平和を祈る場所です。中には、死没者の名前が掲載された名簿が納められている追悼スペースや、原爆に関する手記や関連図書を読むことができるエリア、そして交流ラウンジもあります。また、音声と映像で被爆者の証言が聞けるほか、被爆者の医療や研究に関する情報も提供されています。</p>
+                <p>滞在時間: 60分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=国立長崎原爆死没者追悼平和祈念館&center=32.772124,129.865019&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>3つ目の場所: 平和公園（原爆落下中心地）</h2>
+                <img src="../../../image/genbakurakkatyuusinti.jpg" alt="平和公園（原爆落下中心地）の写真" class="img-fluid rounded">
+                <p>特徴: 悲しみの原点、グラウンド・ゼロ<br>1945年8月9日に原子爆弾が炸裂した場所で、多くの犠牲者を出した悲劇の地です。黒御影石の碑が爆心地を示し、被爆当時の地層や遺物が残されています。この公園は、戦争の惨禍を忘れずに平和を願う場所として、市民や観光客に親しまれています</p>
+                <p>滞在時間: 30分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=平和公園（原爆落下中心地）&center=32.773741,129.863244&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>4つ目の場所: 城山小学校（城山小学校平和祈念館）</h2>
+                <img src="../../../image/siroyamasyougakkou.jpg" alt="城山小学校（城山小学校平和祈念館）の写真" class="img-fluid rounded">
+                <p>特徴: 爆心地にもっとも近い国民学校の被爆校舎を保存、利用した平和祈念館<br>原爆投下時に被爆した校舎を改装して作られた平和祈念館です。被爆直後の写真や遺物、当時の校舎の模型などが展示されており、一般公開されています。また、校内には平和祈念館以外にも「少年平和像」など幾つかのモニュメントがあります。</p>
+                <p>滞在時間: 20分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=城山小学校（城山小学校平和祈念館）&center=32.773738,129.857787&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>5つ目の場所: 平和公園（平和祈念像・平和の泉)</h2>
+                <img src="../../../image/heiwakouen.jpg" alt="平和公園（平和祈念像・平和の泉)の写真" class="img-fluid rounded">
+                <p>特徴: 原爆犠牲者の冥福と恒久平和を願う祈りの空間<br>心静かに過去を振り返り、未来の平和を願う空間です。<br>平和祈念像と平和の泉は、戦争の悲劇を思い出させ、心に深く平和の重要性を刻みます。</p>
+                <p>滞在時間: 60分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=平和公園（平和祈念像・平和の泉）&center=32.776921,129.863964&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>6つ目の場所: 如己堂</h2>
+                <img src="../../../image/nyokodou.jpg" alt="如己堂の写真" class="img-fluid rounded">
+                <p>特徴: 多くの人に受け継がれる永井隆博士の恒久平和と隣人愛のシンボル<br>永井隆博士が白血病の療養をしながら創作に没頭した長崎市の記念館で、被爆後の困難を乗り越えた人々の協力で建てられた象徴的な場所です​​。博士はここで隣人愛と恒久平和の精神を体現し、多くの著名な作品を執筆しました​​。</p>
+                <p>滞在時間: 20分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=如己堂&center=32.77901,129.865573&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>7つ目の場所: 一本柱鳥居（山王神社）</h2>
+                <img src="../../../image/ipponbasiratorii.jpg" alt="一本柱鳥居（山王神社）の写真" class="img-fluid rounded">
+                <p>特徴: 原爆の脅威をヒシヒシと伝える貴重な被爆遺構<br>長崎の山王神社にある一本柱鳥居は、原爆の爆風に耐えた歴史の証人です。緑豊かな境内に佇むこの鳥居は、平和の大切さを静かに語りかけています。</p>
+                <p>滞在時間: 5分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=一本柱鳥居（山王神社）&center=32.767459,129.867343&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>8つ目の場所: 福済寺</h2>
+                <img src="../../../image/hukusaiji.jpg" alt="福済寺の写真" class="img-fluid rounded">
+                <p>特徴: 長崎の街を見守る『万国霊廟長崎観音』が特徴的な寺院<br>平和の願いを込めた壮大な観音像とともに、訪れる人々に深い感動を与える場所です。</p>
+                <p>滞在時間: 20分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=福済寺&center=32.7531553,129.8748897&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+            <div class="section">
+                <h2>9つ目の場所: 長崎市亀山社中記念館</h2>
+                <img src="../../../image/kameyamasyatyuu.jpg" alt="長崎市亀山社中記念館の写真" class="img-fluid rounded">
+                <p>特徴: 坂本龍馬が結成した日本初カンパニー「亀山社中」跡に建つ記念館<br>日本初の商社ともされる坂本龍馬が中心となり結成した「亀山社中」の歴史を伝える場所です。歴史愛好家には必見のスポットであり、かつての遺構が復元された空間を見学することができます。​​​​​​</p>
+                <p>滞在時間: 20分</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq_rrEvtG_VdLIN69gx44f6Fj9M9Ptm1g&q=長崎市亀山社中記念館&center=32.748753,129.886768&zoom=15&maptype=roadmap" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+    <div class="col-12 col-md-6">
+        <p>到着:松ヶ枝国際ターミナル</p>
+    </div>
+
+<!-- BootstrapのJavaScriptとjQueryを読み込み --> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script> 
+<script src ="../../corse.js"></script>
+</body>
+</html>
