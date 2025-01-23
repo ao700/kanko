@@ -12,9 +12,9 @@ let currentIndex = 0;
 
 function changeBackgroundImage() {
     const backgroundImage = document.getElementById('background-image');
-    currentIndex = (currentIndex + 1) % backgroundImages.length;
     const imageUrl = `url(${backgroundImages[currentIndex]})`;
     backgroundImage.style.backgroundImage = imageUrl;
+    currentIndex = (currentIndex + 1) % backgroundImages.length;
 }
 
 // 最初の実行
@@ -24,13 +24,3 @@ changeBackgroundImage();
 setTimeout(() => {
     setInterval(changeBackgroundImage, 5000);
 }, 3000);
-
-//ナビゲーションの設定
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navbarMenu = document.querySelector(".navbar-menu");
-
-    menuToggle.addEventListener("click", function() {
-        navbarMenu.classList.toggle("active");
-    });
-});
